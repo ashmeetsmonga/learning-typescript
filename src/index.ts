@@ -50,3 +50,52 @@ let evh2: Guitarist = {
 const greetGuitarist = (guitarist: Guitarist) => {
 	return `Hello ${guitarist.name?.toUpperCase()}`;
 };
+
+//Lesson 3
+//Type Aliases
+type stringOrNumberArray = (string | number)[];
+type Guitarist1 = {
+	name?: string;
+	active: boolean;
+	albums: stringOrNumberArray;
+};
+//Not possible with interface
+
+//Literal Types
+let myName1: "Dave" | "Amy" | "John";
+
+//Functions
+const add = (a: number, b: number): number => {
+	return a + b;
+};
+
+const logMsg = (msg: any): void => {
+	console.log(msg);
+};
+
+type MathFunction = (a: number, b: number) => number;
+interface MathFunctionI {
+	(a: number, b: number): number;
+}
+
+const subtract: MathFunction = function (a, b) {
+	return a - b;
+};
+
+const multiply: MathFunction = function (a, b) {
+	return a * b;
+};
+
+const addAll = (a: number, b: number, c?: number): number => {
+	if (typeof c !== "undefined") return a + b + c;
+	return a + b;
+};
+
+const sumAll = (a: number, b: number, c: number = 0): number => {
+	return a + b + c;
+};
+
+//Rest Parameters
+const total = (...nums: number[]): number => {
+	return nums.reduce((acc, val) => acc + val);
+};

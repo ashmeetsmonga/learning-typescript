@@ -36,3 +36,31 @@ const greetGuitarist = (guitarist) => {
     var _a;
     return `Hello ${(_a = guitarist.name) === null || _a === void 0 ? void 0 : _a.toUpperCase()}`;
 };
+//Not possible with interface
+//Literal Types
+let myName1;
+//Functions
+const add = (a, b) => {
+    return a + b;
+};
+const logMsg = (msg) => {
+    console.log(msg);
+};
+const subtract = function (a, b) {
+    return a - b;
+};
+const multiply = function (a, b) {
+    return a * b;
+};
+const addAll = (a, b, c) => {
+    if (typeof c !== "undefined")
+        return a + b + c;
+    return a + b;
+};
+const sumAll = (a, b, c = 0) => {
+    return a + b + c;
+};
+//Rest Parameters
+const total = (...nums) => {
+    return nums.reduce((acc, val) => acc + val);
+};
