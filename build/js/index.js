@@ -64,3 +64,6 @@ const sumAll = (a, b, c = 0) => {
 const total = (...nums) => {
     return nums.reduce((acc, val) => acc + val);
 };
+const createErrror = (msg) => {
+    throw new Error(msg);
+};

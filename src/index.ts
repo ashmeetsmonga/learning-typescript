@@ -99,3 +99,7 @@ const sumAll = (a: number, b: number, c: number = 0): number => {
 const total = (...nums: number[]): number => {
 	return nums.reduce((acc, val) => acc + val);
 };
+
+const createErrror = (msg: string): never => {
+	throw new Error(msg);
+};
