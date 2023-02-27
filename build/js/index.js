@@ -67,3 +67,11 @@ const total = (...nums) => {
 const createErrror = (msg) => {
     throw new Error(msg);
 };
+//use of never type
+const numberOrString = (a) => {
+    if (typeof a === "string")
+        return "string";
+    if (typeof a === "number")
+        return "number";
+    return createErrror("This would never happen");
+};

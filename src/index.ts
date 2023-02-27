@@ -103,3 +103,10 @@ const total = (...nums: number[]): number => {
 const createErrror = (msg: string): never => {
 	throw new Error(msg);
 };
+
+//use of never type
+const numberOrString = (a: string | number): string => {
+	if (typeof a === "string") return "string";
+	if (typeof a === "number") return "number";
+	return createErrror("This would never happen");
+};
