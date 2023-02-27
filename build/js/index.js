@@ -75,3 +75,19 @@ const numberOrString = (a) => {
         return "number";
     return createErrror("This would never happen");
 };
+let a = 10;
+let b = a;
+let c = a;
+const addOrConcat = (a, b, c) => {
+    if (c === "add")
+        return a + b;
+    return "" + a + b;
+};
+const myVal = addOrConcat(2, 3, "concat");
+//double casting or forced casting
+10;
+//The DOM
+const img = document.querySelector("img");
+const myImg = document.getElementById("img");
+img.src;
+myImg.src;

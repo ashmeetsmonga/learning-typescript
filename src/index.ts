@@ -51,7 +51,7 @@ const greetGuitarist = (guitarist: Guitarist) => {
 	return `Hello ${guitarist.name?.toUpperCase()}`;
 };
 
-//Lesson 3
+//Lesson 4
 //Type Aliases
 type stringOrNumberArray = (string | number)[];
 type Guitarist1 = {
@@ -110,3 +110,27 @@ const numberOrString = (a: string | number): string => {
 	if (typeof a === "number") return "number";
 	return createErrror("This would never happen");
 };
+
+//Lesson 5 Assertions
+type One = string | number;
+
+let a = 10;
+let b = a as One;
+let c = <One>a;
+
+const addOrConcat = (a: number, b: number, c: "add" | "concat"): string | number => {
+	if (c === "add") return a + b;
+	return "" + a + b;
+};
+
+const myVal: string = addOrConcat(2, 3, "concat") as string;
+
+//double casting or forced casting
+10 as unknown as string;
+
+//The DOM
+const img = document.querySelector("img")!;
+const myImg = document.getElementById("img") as HTMLImageElement;
+
+img.src;
+myImg.src;
