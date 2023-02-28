@@ -145,7 +145,27 @@ class Coder {
 		private age: number,
 		protected lang: string = "Typescript"
 	) {}
+
+	public getAge = () => {
+		return this.age;
+	};
 }
 
 const Dave = new Coder("Dave", "Punk Rock", 25, "Python");
 console.log(Dave);
+console.log(Dave.getAge());
+//console.log(Dave.age) would show error but compile and run successfully
+
+class WebDev extends Coder {
+	constructor(public computer: string, name: string, music: string, age: number) {
+		super(name, music, age);
+		this.computer = computer; //not necessary
+	}
+	public getComputer() {
+		return this.computer;
+	}
+}
+
+const Amy = new WebDev("Mac", "Amy", "Daft Punk", 25);
+console.log(Amy);
+console.log(Amy.getComputer());

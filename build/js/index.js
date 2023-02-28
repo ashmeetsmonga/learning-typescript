@@ -98,7 +98,25 @@ class Coder {
         this.music = music;
         this.age = age;
         this.lang = lang;
+        this.getAge = () => {
+            return this.age;
+        };
     }
 }
 const Dave = new Coder("Dave", "Punk Rock", 25, "Python");
 console.log(Dave);
+console.log(Dave.getAge());
+//console.log(Dave.age) would show error but compile and run successfully
+class WebDev extends Coder {
+    constructor(computer, name, music, age) {
+        super(name, music, age);
+        this.computer = computer;
+        this.computer = computer; //not necessary
+    }
+    getComputer() {
+        return this.computer;
+    }
+}
+const Amy = new WebDev("Mac", "Amy", "Daft Punk", 25);
+console.log(Amy);
+console.log(Amy.getComputer());
