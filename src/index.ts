@@ -192,3 +192,24 @@ class Pianist implements Musician {
 
 const Page = new Pianist("Page", "Piano");
 console.log(Page.play("plays"));
+
+class Peeps {
+	static count: number = 0;
+
+	static getCount(): number {
+		return Peeps.count;
+	}
+
+	public id: number;
+	constructor(public name: string) {
+		this.name = name;
+		this.id = ++Peeps.count;
+	}
+}
+
+const Jack = new Peeps("Jack");
+const Sara = new Peeps("Sara");
+const Penny = new Peeps("Penny");
+
+console.log(Peeps.count);
+console.log(Penny.id);

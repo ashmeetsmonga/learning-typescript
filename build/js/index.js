@@ -131,3 +131,19 @@ class Pianist {
 }
 const Page = new Pianist("Page", "Piano");
 console.log(Page.play("plays"));
+class Peeps {
+    static getCount() {
+        return Peeps.count;
+    }
+    constructor(name) {
+        this.name = name;
+        this.name = name;
+        this.id = ++Peeps.count;
+    }
+}
+Peeps.count = 0;
+const Jack = new Peeps("Jack");
+const Sara = new Peeps("Sara");
+const Penny = new Peeps("Penny");
+console.log(Peeps.count);
+console.log(Penny.id);
