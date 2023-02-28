@@ -120,3 +120,14 @@ class WebDev extends Coder {
 const Amy = new WebDev("Mac", "Amy", "Daft Punk", 25);
 console.log(Amy);
 console.log(Amy.getComputer());
+class Pianist {
+    constructor(name, instrument) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+    play(action) {
+        return `${this.name} ${action} the ${this.instrument}`;
+    }
+}
+const Page = new Pianist("Page", "Piano");
+console.log(Page.play("plays"));

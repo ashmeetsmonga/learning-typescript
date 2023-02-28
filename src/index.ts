@@ -169,3 +169,26 @@ class WebDev extends Coder {
 const Amy = new WebDev("Mac", "Amy", "Daft Punk", 25);
 console.log(Amy);
 console.log(Amy.getComputer());
+
+interface Musician {
+	name: string;
+	instrument: string;
+	play(action: string): string;
+}
+
+class Pianist implements Musician {
+	name: string;
+	instrument: string;
+
+	constructor(name: string, instrument: string) {
+		this.name = name;
+		this.instrument = instrument;
+	}
+
+	public play(action: string) {
+		return `${this.name} ${action} the ${this.instrument}`;
+	}
+}
+
+const Page = new Pianist("Page", "Piano");
+console.log(Page.play("plays"));
