@@ -132,5 +132,20 @@ const myVal: string = addOrConcat(2, 3, "concat") as string;
 const img = document.querySelector("img")!;
 const myImg = document.getElementById("img") as HTMLImageElement;
 
-img.src;
-myImg.src;
+// img.src;
+// myImg.src;
+
+//Lesson 6 Class
+class Coder {
+	secondLang!: string;
+
+	constructor(
+		public readonly name: string,
+		public music: string,
+		private age: number,
+		protected lang: string = "Typescript"
+	) {}
+}
+
+const Dave = new Coder("Dave", "Punk Rock", 25, "Python");
+console.log(Dave);

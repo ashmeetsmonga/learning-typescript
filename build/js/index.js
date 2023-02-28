@@ -89,5 +89,16 @@ const myVal = addOrConcat(2, 3, "concat");
 //The DOM
 const img = document.querySelector("img");
 const myImg = document.getElementById("img");
-img.src;
-myImg.src;
+// img.src;
+// myImg.src;
+//Lesson 6 Class
+class Coder {
+    constructor(name, music, age, lang = "Typescript") {
+        this.name = name;
+        this.music = music;
+        this.age = age;
+        this.lang = lang;
+    }
+}
+const Dave = new Coder("Dave", "Punk Rock", 25, "Python");
+console.log(Dave);
