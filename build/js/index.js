@@ -234,16 +234,12 @@ const checkBoolValue = (arg) => {
     }
     return { value: arg, is: !!arg };
 };
-// //////////////////////////////////////
-// interface HasID {
-//     id: number
-// }
-// const processUser = <T extends HasID>(user: T): T => {
-//     // process the user with logic here
-//     return user
-// }
-// console.log(processUser({ id: 1, name: 'Dave' }))
-// //console.log(processUser({ name: 'Dave'}))
+const processUser = (user) => {
+    // process the user with logic here
+    return user;
+};
+console.log(processUser({ id: 1, name: "Dave" }));
+//console.log(processUser({ name: 'Dave'}))
 // ///////////////////////////////////////
 // const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
 //     return users.map(user => user[key])
