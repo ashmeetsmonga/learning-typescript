@@ -374,13 +374,13 @@ const processUser = <T extends HasID>(user: T): T => {
 };
 
 console.log(processUser({ id: 1, name: "Dave" }));
-//console.log(processUser({ name: 'Dave'}))
+console.log(processUser({ id: 10, name: "Dave" }));
 
 // ///////////////////////////////////////
 
-// const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
-//     return users.map(user => user[key])
-// }
+const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
+	return users.map((user) => user[key]);
+};
 
 // const usersArray = [
 //     {

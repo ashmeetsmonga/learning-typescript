@@ -239,11 +239,11 @@ const processUser = (user) => {
     return user;
 };
 console.log(processUser({ id: 1, name: "Dave" }));
-//console.log(processUser({ name: 'Dave'}))
+console.log(processUser({ id: 10, name: "Dave" }));
 // ///////////////////////////////////////
-// const getUsersProperty = <T extends HasID, K extends keyof T>(users: T[], key: K): T[K][] => {
-//     return users.map(user => user[key])
-// }
+const getUsersProperty = (users, key) => {
+    return users.map((user) => user[key]);
+};
 // const usersArray = [
 //     {
 //         "id": 1,
