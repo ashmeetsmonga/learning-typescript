@@ -10,7 +10,7 @@ const Counter = ({ children, setCount }: CounterProps) => {
 		<>
 			<h1>{children}</h1>
 			<button onClick={() => setCount((prev) => prev + 1)}>Increment</button>
-			<button onClick={() => setCount((prev) => prev - 1)}>Increment</button>
+			<button onClick={() => setCount((prev) => prev - 1)}>Decrement</button>
 		</>
 	);
 };
